@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/gushigui.py" line="43" mnemonic="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ff75d70-51b7-4c56-9c44-5411dd85a77e" name="Default Changelist" comment="" />
+    <list default="true" id="4ff75d70-51b7-4c56-9c44-5411dd85a77e" name="Default Changelist" comment="adsf">
+      <change afterPath="$PROJECT_DIR$/args_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gushiguinoconfig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongodbop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/numbatest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testoledb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseExcelOP.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseExcelOP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gushigui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gushigui.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,20 +25,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/gushixiangmu$gushiguinoconfig.coverage" NAME="gushiguinoconfig Coverage Results" MODIFIED="1614178011095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$test_con.coverage" NAME="test_con Coverage Results" MODIFIED="1613653563366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$mongodbop.coverage" NAME="mongodbop Coverage Results" MODIFIED="1614262188946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$tt1.coverage" NAME="tt1 Coverage Results" MODIFIED="1613645120841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$t1.coverage" NAME="t1 Coverage Results" MODIFIED="1613647387826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1612619413690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gushixiangmu$gushigui.coverage" NAME="gushigui Coverage Results" MODIFIED="1613657092273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gushixiangmu$BaseExcelOP.coverage" NAME="BaseExcelOP Coverage Results" MODIFIED="1613653211444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$gushigui.coverage" NAME="gushigui Coverage Results" MODIFIED="1613738775924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$BaseExcelOP.coverage" NAME="BaseExcelOP Coverage Results" MODIFIED="1614002617107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$numbatest.coverage" NAME="numbatest Coverage Results" MODIFIED="1613830999219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$args_test.coverage" NAME="args_test Coverage Results" MODIFIED="1613913557106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$copy_excel.coverage" NAME="copy_excel Coverage Results" MODIFIED="1613213158583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$testoledb.coverage" NAME="testoledb Coverage Results" MODIFIED="1613993722168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$t3.coverage" NAME="t3 Coverage Results" MODIFIED="1612946053646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$guiclasstest.coverage" NAME="guiclasstest Coverage Results" MODIFIED="1613645381789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gushixiangmu$functions.coverage" NAME="functions Coverage Results" MODIFIED="1613656719181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$functions.coverage" NAME="functions Coverage Results" MODIFIED="1614258087918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$adotest.coverage" NAME="adotest Coverage Results" MODIFIED="1612696388817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1612703131054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gushixiangmu$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1612709853593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gushixiangmu$guis.coverage" NAME="guis Coverage Results" MODIFIED="1613393275976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gushixiangmu$guis.coverage" NAME="guis Coverage Results" MODIFIED="1613740358329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -48,17 +69,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+            <state relative-caret-position="184">
+              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+              <folding>
+                <element signature="e#16#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/configs.cfg">
+        <entry file="file://$PROJECT_DIR$/mongodbop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="267">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseExcelOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="450">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -76,24 +103,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gushigui.py">
+        <entry file="file://$PROJECT_DIR$/gushiguinoconfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="23">
+              <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_con.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,7 +126,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ini</find>
+      <find>wacatac</find>
+      <find>xlsm</find>
+      <find>sheet1</find>
+      <find>gui_get_path</find>
+      <find>get_compare_sheet</find>
+      <find>keyerr</find>
+      <find>keyerror</find>
+      <find>op</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\projects\gushixiangmu</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -132,19 +158,24 @@
         <option value="$PROJECT_DIR$/guiclasstest.py" />
         <option value="$PROJECT_DIR$/t1.py" />
         <option value="$PROJECT_DIR$/test_con.py" />
-        <option value="$PROJECT_DIR$/BaseExcelOP.py" />
+        <option value="$PROJECT_DIR$/configs.cfg" />
         <option value="$PROJECT_DIR$/configs.ini" />
         <option value="$PROJECT_DIR$/gushigui.py" />
-        <option value="$PROJECT_DIR$/configs.cfg" />
+        <option value="$PROJECT_DIR$/numbatest.py" />
+        <option value="$PROJECT_DIR$/args_test.py" />
+        <option value="$PROJECT_DIR$/testoledb.py" />
+        <option value="$PROJECT_DIR$/BaseExcelOP.py" />
+        <option value="$PROJECT_DIR$/gushiguinoconfig.py" />
         <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/mongodbop.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="840" />
-    <option name="y" value="520" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="487" />
+    <option name="y" value="62" />
     <option name="width" value="2065" />
-    <option name="height" value="1130" />
+    <option name="height" value="1180" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -152,6 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,14 +195,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -189,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.gushigui">
+  <component name="RunManager" selected="Python.mongodbop">
     <configuration name="BaseExcelOP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gushixiangmu" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -234,7 +265,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gushigui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gushiguinoconfig" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true">
       <module name="gushixiangmu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,7 +278,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gushigui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gushiguinoconfig.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -256,7 +287,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="t1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mongodbop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gushixiangmu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,7 +300,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/t1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mongodbop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,7 +309,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_con" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testoledb" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gushixiangmu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,7 +322,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_con.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testoledb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,19 +332,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.BaseExcelOP" />
-      <item itemvalue="Python.test_con" />
-      <item itemvalue="Python.t1" />
+      <item itemvalue="Python.gushiguinoconfig" />
       <item itemvalue="Python.functions" />
-      <item itemvalue="Python.gushigui" />
+      <item itemvalue="Python.testoledb" />
+      <item itemvalue="Python.BaseExcelOP" />
+      <item itemvalue="Python.mongodbop" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gushigui" />
+        <item itemvalue="Python.mongodbop" />
         <item itemvalue="Python.functions" />
-        <item itemvalue="Python.test_con" />
+        <item itemvalue="Python.gushiguinoconfig" />
         <item itemvalue="Python.BaseExcelOP" />
-        <item itemvalue="Python.t1" />
+        <item itemvalue="Python.testoledb" />
       </list>
     </recent_temporary>
   </component>
@@ -339,12 +370,30 @@
       <workItem from="1613214335583" duration="3398000" />
       <workItem from="1613355055661" duration="5959000" />
       <workItem from="1613621914595" duration="29255000" />
-      <workItem from="1613657183503" duration="522000" />
+      <workItem from="1613657183503" duration="959000" />
+      <workItem from="1613730642135" duration="10659000" />
+      <workItem from="1613743570725" duration="1234000" />
+      <workItem from="1613817531403" duration="11600000" />
+      <workItem from="1613882530067" duration="19135000" />
+      <workItem from="1613989032817" duration="11046000" />
+      <workItem from="1614079238454" duration="9428000" />
+      <workItem from="1614160313347" duration="1868000" />
+      <workItem from="1614162213965" duration="3139000" />
+      <workItem from="1614176293480" duration="2169000" />
+      <workItem from="1614246895582" duration="10833000" />
     </task>
+    <task id="LOCAL-00001" summary="adsf">
+      <created>1613657742892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613657742892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70503000" />
+    <option name="totallyTimeSpent" value="152051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -356,42 +405,73 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
-    <editor active="true" />
+    <frame x="390" y="50" width="1652" height="944" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12774451" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6139535" visible="true" weight="0.20702635" />
+      <window_info id="Structure" order="1" sideWeight="0.3860465" side_tool="true" weight="0.17962466" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33065328" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38492462" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34104627" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43965518" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32964823" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32964823" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32897383" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32897383" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3949749" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.45125628" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.15694165" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.55172414" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13473053" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32984033" />
+      <window_info anchor="right" id="Database" order="4" weight="0.13473053" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6139535" visible="true" weight="0.13373253" />
+      <window_info id="Structure" order="1" sideWeight="0.3860465" side_tool="true" weight="0.17962466" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34104627" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44064388" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32964823" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32897383" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32897383" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15694165" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.45070422" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32984033" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13473053" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adsf" />
+    <option name="LAST_COMMIT_MESSAGE" value="adsf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/t2.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/testoledb.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mongodbop.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -402,56 +482,62 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="r[0]" language="Python" />
+        <watch expression="write_mongo_data[4000]" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>mv[&quot;value&quot;]==be_dict</expression-string>
+        <expression-string>write_mongo_data[4000]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>mv[&quot;value&quot;]</expression-string>
+        <expression-string>r[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>n_cols[0].value</expression-string>
+        <expression-string>r[d]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>n_cols[0]</expression-string>
+        <expression-string>list(row[0].cursor_description)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>n_cols.value()</expression-string>
+        <expression-string>row[0].cursor_description[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sheet.range('1:1')</expression-string>
+        <expression-string>row[0].cursor_description</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sheet.Range('1:1')</expression-string>
+        <expression-string>values</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sheet.Range[1:1]</expression-string>
+        <expression-string>values[&quot;current_book&quot;]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>colnum % 26 == 0</expression-string>
+        <expression-string>window['current_book'].Value()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>colnum // 26 == 0</expression-string>
+        <expression-string>window['current_book'].value</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -465,30 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adotest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -513,39 +579,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/copy_excel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/record">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,20 +603,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tt1.py">
+    <entry file="file://$PROJECT_DIR$/guiclasstest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state relative-caret-position="552">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/xlwings/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="3704" selection-start-line="3704" selection-end-line="3704" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Python/Python37/Lib/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="1145" selection-start-line="1145" selection-end-line="1145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PySimpleGUI/PySimpleGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3154" column="8" selection-start-line="3154" selection-start-column="8" selection-end-line="3154" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guiclasstest.py">
+    <entry file="file://$PROJECT_DIR$/tt1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="184">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numba/cuda/compiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="866" selection-start-line="866" selection-end-line="866" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbatest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/args_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yuan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/record">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="1688" selection-start-line="1688" selection-end-line="1688" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gushigui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1726">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testoledb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="107" selection-start-line="6" selection-start-column="107" selection-end-line="6" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_con.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -591,37 +766,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/xlwings/main.py">
+    <entry file="file://$PROJECT_DIR$/t2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="3704" selection-start-line="3704" selection-end-line="3704" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Python37/Lib/configparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="695" selection-start-line="695" selection-end-line="695" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yuan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="64" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PySimpleGUI/PySimpleGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="14489" column="16" selection-start-line="14489" selection-start-column="5" selection-end-line="14489" selection-end-column="16" />
+        <state relative-caret-position="299">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/t1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
+        <state relative-caret-position="23">
           <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -629,47 +786,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
+    <entry file="file://D:/Python/Python37/Lib/multiprocessing/process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="209">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseExcelOP.py">
+    <entry file="file://D:/Python/Python37/Lib/multiprocessing/connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="690" selection-start-line="690" selection-end-line="690" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gushigui.py">
+    <entry file="file://D:/Python/Python37/Lib/multiprocessing/managers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="209">
+          <caret line="787" selection-start-line="787" selection-end-line="787" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gushiguinoconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_con.py">
+    <entry file="file://$PROJECT_DIR$/BaseExcelOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="450">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs.cfg">
+    <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        <state relative-caret-position="184">
+          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+          <folding>
+            <element signature="e#16#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodbop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

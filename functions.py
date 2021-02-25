@@ -7,7 +7,13 @@ import pymongo
 import pyodbc
 import os
 import multiprocessing as mul
+#from numba import jit
+#from numba import cuda
+import warnings
+from datetime import datetime as dt
+import re
 
+warnings.filterwarnings('ignore')
 
 # excel 列名变数字
 def colname_to_num(colname):
@@ -33,12 +39,24 @@ def column_to_name(colnum):
             str_ += chr(temp + 65)
             colnum = colnum - 1
         else:
-
             str_ += chr(colnum % 26 - 1 + 65)
         colnum //= 26
         # print(str)
     # 倒序输出拼写的字符串
     return str_[::-1]
+
+def get_target_cell_pos(cell_value):
+    sheet_name=cell_value.split("(")[0]
+    temp=cell_value.split('(')[1].split(")")[0]
+    cell_name=re.split(r'(\D+)',temp)
+    col_name=cell_name[1].upper()
+    row_name=cell_name[2]
+    return {
+        "sheet_name":sheet_name,
+        "col_name":col_name,
+        "row_name":row_name,
+    }
+
 
 
 # 获取路径下的文件
@@ -54,17 +72,19 @@ def check_is_excel(file_name):
         return False
     pass
 
+
+"""
 def get_cp():
     cp = CP()
-    cp.read("configs.cfg",encoding="utf-8-sig")
+    cp.read("configs.ini",encoding="utf-8")
     return cp
 
 def write_cp(section,key,value):
     cp = CP()
-    cp.read("configs.cfg", encoding="utf-8-sig")
+    cp.read("configs.ini", encoding="utf-8")
     cp.set(section,key,value)
 
-    cp.write(open("configs.cfg",'w',encoding="utf-8-sig"))
+    cp.write(open("configs.ini",'w',encoding="utf-8"))
     return "写入成功"
 
 def get_mango_client_name():
@@ -82,6 +102,28 @@ def get_mango_col_name():
 def get_excel_driver():
     return get_cp().get("excel", "driver")
 
+def get_compare_sheet():
+    return get_cp().get("excel", "comparesheet")
+
+"""
+def get_mango_client_name():
+    return "mongodb://127.0.0.1:27017/"
+
+
+def get_mango_db_name():
+    return "db"
+
+
+def get_mango_col_name():
+    return "runoob"
+
+
+def get_excel_driver():
+    return "DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};"
+
+
+
+
 
 def get_mango_col():
     myclient = pymongo.MongoClient(get_mango_client_name())
@@ -93,6 +135,8 @@ def get_mango_col():
 def insert_mango_col(this_dict):
     get_mango_col().insert(this_dict)
 
+def insert_mango_many(data_list):
+    get_mango_col().insert_many(data_list)
 
 def del_mango_col():
     get_mango_col().delete_many({})
@@ -101,46 +145,208 @@ def del_mango_col():
 def mango_col_value():
     return get_mango_col().find()
 
+def mango_col_find_fields(sheet_name):
+    return  get_mango_col().find({}, {"name": 1, sheet_name: {"value": 1,"error":1}})
 
-def read_excel_write_db(excel_path, sheet_name="Sheet1", id=0):
+
+
+
+"""
+def get_file_name(file_path):
+    (filepath, tempfilename) = os.path.split(file_path)
+    (filename, extension) = os.path.splitext(tempfilename)
+    return filename
+"""
+
+#@jit
+def sort_result_by_filelist(base_cols,file_list,result_list,sheet_name):
+
+    check_status_list = []
+    check_value_list = []
+    # 采用原宏文件的表名顺序
+    result={"check_status_list":"","check_value_list":""}
+    for i in file_list:
+        flag = 0
+        for r in result_list:
+
+            if i == r['name'].split("/")[-1].split(".")[0]:
+                flag = 1
+                try:
+                    v=r[sheet_name]['value']
+                except:
+                    try:
+                        error=r[sheet_name]['error']
+                        check_status_list.append(["检查不成功"])
+                        check_value_list.append([error])
+                        continue
+                    except:
+                        check_status_list.append(["检查不成功"])
+                        check_value_list.append(["检查不成功且无错误信息"])
+                        continue
+
+                re = check_dict_same(base_cols, r[sheet_name]['value'])
+
+                check_status_list.append([re['status']])
+                check_value_list.append([re['result']])
+                break
+        if flag == 0:
+            check_status_list.append([""])
+            check_value_list.append([""])
+    result["check_status_list"]=check_status_list
+    result["check_value_list"] = check_value_list
+    return result
+
+
+def check_dict_same(dict1,dict2):
+    result = {}
+
+    if dict1==dict2:
+        result["status"] = f"格式相同"
+        result["result"] = f"检查成功"
+        return result
+    s="格式不同："
+
+    for key in dict2:
+        try:
+            if dict1[key]!=dict2[key]:
+                s+=f"第{key} 列[{dict2[key]}]不同;"
+        except KeyError:
+
+            s += f"源表中第{key}在格式表中不存在;"
+
+    result["status"]=f"格式不同"
+    result["result"] = s
+    return result
+
+#sheet_name="Sheet1",
+def read_excel_write_db(process_op_dict,excel_path, sheet_name, id=0):
     conn_str = (
             get_excel_driver() + "DBQ=" + excel_path + ";"
         # r'DBQ=C:\Users\Administrator\Desktop\辅助.xlsx;'
     )
-    cnxn = pyodbc.connect(conn_str, autocommit=True)
-    crsr = cnxn.cursor()
-    row = crsr.execute("select * from [" + sheet_name + "$]").fetchall()
+    try:
+        cnxn = pyodbc.connect(conn_str, autocommit=True)
+        crsr = cnxn.cursor()
+    except:
+        print(f"{excel_path}连接失败 ")
+        process_op_dict["error"] = f"{excel_path}连接失败 "
+        return
     this_dict = {}
     this_dict["name"] = excel_path
-    this_dict["id"] = id
+
+    this_dict[sheet_name]=sheet_to_dict(process_op_dict,crsr,sheet_name,excel_path)
+    #this_dict["Sheet2"] = sheet_to_dict(crsr, "Sheet2")
+    #this_dict["Sheet3"] = sheet_to_dict(crsr, "Sheet3")
+
+    insert_mango_col(this_dict)
+
+
+
+def sheet_to_dict(process_op_dict,crsr,sheet_name,excel_path):
+    this_dict = {}
+    try:
+        row = crsr.execute("select * from [" + sheet_name + "$]").fetchall()
+    except:
+        print(f"{excel_path}中的表{sheet_name}不存在")
+        #process_op_dict["error"]=f"{excel_path}中的表{sheet_name}不存在,或excel连接错误 "
+        this_dict["error"]=f"{sheet_name}不存在"
+        return this_dict
+
+    this_dict["id"] = ""
     v = {}
     i = 1
+
     for field in row[0].cursor_description:
         if "F" in field[0]:
             break
         v[column_to_name(i)] = field[0]
         # v["\'" + str(i) + "\'"] = field[0]
         i = i + 1
-
     this_dict["value"] = v
-    # return this_dict
-    insert_mango_col(this_dict)
+    """
+    row_data = {}
+    current = 1
+    for r in row:
+        row_to_mongo = {}
+        j = 0
+        for n in v:
+
+            #row_to_mongo[n+str(current+1)+"@"+v[n]] = r[j]
+            row_to_mongo[n + str(current + 1)]={"name":v[n],"value":r[j]}
+            j = j + 1
+        row_data[str(current+1)] = row_to_mongo
+        current = current + 1
+
+    this_dict["data"] = row_data
+    """
+    return this_dict
 
 
-def process(file_path, max_process, max_file=-1):
+def read_excel_data(process_op_dict,excel_path, sheet_name):
+    print("start:",dt.now())
+    conn_str = (
+            get_excel_driver() + "DBQ=" + excel_path + ";"
+    )
+    try:
+        cnxn = pyodbc.connect(conn_str, autocommit=True)
+        crsr = cnxn.cursor()
+    except:
+        print(f"{excel_path}连接失败 ")
+        process_op_dict["error"] = f"{excel_path}连接失败 "
+        return
+    print("excel connect:", dt.now())
+    this_dict = {}
+    try:
+        row = crsr.execute("select * from [" + sheet_name + "$]").fetchall()
+    except:
+        print(f"{excel_path}中的表{sheet_name}不存在")
+        process_op_dict["error"]=f"{excel_path}中的表{sheet_name}不存在,或excel连接错误 "
+        this_dict["error"]=f"{sheet_name}不存在"
+        return
+    print("check sheet:", dt.now())
+    write_mongo_data=[]
+    row_num=1
+    fields=row[0].cursor_description
+    print("get_fields:", dt.now())
+    for r in row:
+        data={}
+        j=0
+        data["book_name"] = excel_path
+        data["sheet_name"] = sheet_name
+        data["uid"] = row_num
+        for d in  fields:
+
+            data[column_to_name(j+1)]={"name":d[0],"value":r[j]}
+            j+=1
+        write_mongo_data.append(data)
+        row_num+=1
+    print("for write list:", dt.now())
+    insert_mango_many(write_mongo_data)
+    print("write db:", dt.now())
+
+
+def process(process_op_dict,file_list,sheet_name, max_process,max_file=-1):
     j = 1
     p = []
     current_files = 1
-    files = get_path_files(file_path)
-    for excel_file in files:
+    #files = get_path_files(file_path)
+
+    ts=dt.now()
+    print("开始时间：",ts)
+
+
+    for excel_file in file_list:
+
+        if process_op_dict["stop_process"]==1:
+            print("数据写入操作手工中止", )
+            break
         if max_file != -1:
             if current_files > max_file:
                 continue
-        if not check_is_excel(excel_file):
-            continue
+
         if j <= max_process:
             # file_name = r"DBQ=E:/股市数据处理需求编程/shyg/shyg/" + str(i) + "-aaaaa.xlsx"
-            p.append(mul.Process(target=read_excel_write_db, args=(excel_file,)))
+            p.append(mul.Process(target=read_excel_write_db, args=(process_op_dict,excel_file,sheet_name)))
             j = j + 1
             current_files = current_files + 1
             continue
@@ -150,10 +356,11 @@ def process(file_path, max_process, max_file=-1):
             for p_ in p:
                 p_.join()
             p = []
-            print(current_files, j)
+            process_op_dict["current_file"]=current_files-1
+            print(current_files-1, j-1)
             j = 1
             # file_name = r"DBQ=E:/股市数据处理需求编程/shyg/shyg/" + str(i) + "-aaaaa.xlsx"
-            p.append(mul.Process(target=read_excel_write_db, args=(excel_file,)))
+            p.append(mul.Process(target=read_excel_write_db, args=(process_op_dict,excel_file,sheet_name)))
             current_files = current_files + 1
             j = j + 1
             continue
@@ -165,18 +372,37 @@ def process(file_path, max_process, max_file=-1):
         for p_ in p:
             p_.join()
         p = []
+    te=dt.now()
+    process_op_dict["file_count"] = j-1
+
+    print(f"检查文件数量{j}")
+    print(process_op_dict["file_count"] )
+    print("结束时间：",te)
+    process_op_dict["end_time"]=dt.now()
+    print("耗时",te-ts)
 
 
-def check_dict_same(dict1,dict2):
-    if dict1==dict2:
-        return "格式相同"
-    s=""
-    for key in dict1:
-        if dict1[key]!=dict2[key]:
-            s+=f"列：{key} 的值不相同，分别为{dict1[key]},{dict2[key]};"
-    return s
 
 
 if __name__ == "__main__":
+    #c=get_mango_col()
+    #x=list(c.find({},{"name":1,"Sheet1":{"data":1}}))
+    #for i in c.find({},{"name":1,"Sheet1":{"data":1}}):
+    #    print(i)
+    #    break
+    #print(list(c.find({},{"name":1,"Sheet1":{"data":1}})))
     del_mango_col()
-    process(r"E:/股市数据处理需求编程/shyg/shyg/", 3, 20)
+    t1=dt.now()
+    p=[]
+    for i in range(1,10):
+        p.append(mul.Process(target=read_excel_data, args=({}, f'E:/股市数据处理需求编程/shyg/shyg/{i}-aaaaa.XLSX', "Sheet1")))
+        #read_excel_data({}, f'E:/股市数据处理需求编程/shyg/shyg/{i}-aaaaa.XLSX', "Sheet1")
+    for j in p:
+        j.start()
+    for j in p:
+        j.join()
+    t2 = dt.now()
+    print(t1,t2)
+    pass
+    #read_excel_write_db('E:/股市数据处理需求编程/shyg/shyg/1-aaaaa.XLSX',"Sheet4")
+    #process(r"E:/股市数据处理需求编程/shyg/shyg/", 3, 20)
