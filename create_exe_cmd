@@ -1,0 +1,1 @@
+venv\scripts\pyinstaller -w  -i favicon.ico --version-file file_version.txt  gushiguinoconfig.py --onefile
