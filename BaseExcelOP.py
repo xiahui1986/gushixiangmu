@@ -31,7 +31,12 @@ class BaseExcel:
         return int(self.op_sheet.range("I1").value)
 
     def get_books_name(self):
-        return list(self.op_sheet.range("N2").expand("down").value)
+        res=[]
+        if isinstance(self.op_sheet.range("N2").expand("down").value,str):
+            res.append(self.op_sheet.range("N2").expand("down").value)
+        else:
+            res=list(self.op_sheet.range("N2").expand("down").value)
+        return  res
 
     def del_fields_data(self):
         max_row=self.op_sheet.range("Q65535").end(-4162).row
@@ -44,10 +49,14 @@ class BaseExcel:
     def get_files_name(self):
         re = []
         p = self.get_book_path() + "/"
-        for f in self.op_sheet.range("N2").expand("down").value:
-            if f:
-                re.append(p + f + ".XLSX")
+        if isinstance(self.op_sheet.range("N2").expand("down").value,str):
+            re.append(p + self.op_sheet.range("N2").expand("down").value, + ".XLSX")
+        else:
+            for f in self.op_sheet.range("N2").expand("down").value:
+                if f:
+                    re.append(p + f + ".XLSX")
         return re
+
 
     def write_cell_value(self, cell_name, val):
         self.wb.sheets["Sheet1"].range(cell_name).value = val

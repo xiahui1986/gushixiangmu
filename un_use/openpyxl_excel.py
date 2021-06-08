@@ -2,9 +2,10 @@ import openpyxl as op
 from functions import *
 from multiprocessing import Process
 class OpenExcel:
-    def __init__(self,book_name):
+    def __init__(self,book_name,new_file_name):
         self.book_name=book_name
         self.wb=op.load_workbook(book_name,)
+        self.new_file_name=new_file_name
 
     def write_cell(self,cell_addr,target_value):
         cell_t=get_target_cell_pos(cell_addr)
@@ -15,7 +16,11 @@ class OpenExcel:
         sheet[f"{col_name}{row_name}"].value=target_value
 
     def save(self):
-        self.wb.save(self.book_name)
+        self.wb.save(self.new_file_name)
+
+    def __del__(self):
+        del self.book_name
+        del self.wb
 
 def write_cell(full_name):
     oe=OpenExcel(full_name)

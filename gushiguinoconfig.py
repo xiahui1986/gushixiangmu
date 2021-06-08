@@ -6,11 +6,6 @@ from multiprocessing import Manager
 import sys,os
 from threading import Thread
 import time
-from mongodbop import MongoDBOP
-import mongodbop
-import win32_excel_no_use
-#import sql_excel_no_use
-import subprocess
 import traceback
 
 def gui_get_max_process(excel_name):
@@ -94,9 +89,9 @@ if __name__ == "__main__":
         [sg.Text('输出信息', size=text_size)],
         [sg.Output(size=(300, 8))],
         [  # sg.Button('修改配置', key="change_config", ),
-            sg.Button('启动读取数据内容', key="start", visible=False),
+            sg.Button('启动读取数据内容', key="start", ),
             sg.Button('停止读取进程', key="stop_read_process"),
-            sg.Button('写入校对结果', key="write_result", visible=False),
+            sg.Button('写入校对结果', key="write_result", ),
             sg.Button('关闭窗口', key="close")
         ],
         [
@@ -192,7 +187,7 @@ if __name__ == "__main__":
                 process_op_dict["stop_process"] = 1
                 print("收到手动停止操作指令")
 
-            """
+
             if event == "sheet_write_db":
                 process_op_dict["stop_process"] = 0
                 from BaseExcelOP import BaseExcel
@@ -227,7 +222,7 @@ if __name__ == "__main__":
                 t_ = Thread(target=thread_write_stoptime,
                             args=(t1, process_op_dict, window['end_time'], window['use_time']))
                 t_.start()
-            """
+
             if event == "sheet_write_result":
                 sheet_write_result_thread=Thread(target=sheet_write_result,args=(excel_name,))
                 sheet_write_result_thread.start()
@@ -264,43 +259,7 @@ if __name__ == "__main__":
                 del BaseExcel
                 del be
 
-            if event == "odbc_write_excel":
-                process_op_dict["stop_process"] = 0
-                if default_name_flag:
-                    excel_name = values["current_book"]
-                else:
-                    window['current_book'].update(excel_name)
-                print("开始写入时间:", datetime.now())
-                t1 = datetime.now()
-                process_op_dict["end_time"] = t1
-                t_ = Thread(target=thread_write_stoptime,
-                            args=(t1, process_op_dict, window['end_time'], window['use_time']))
-                t_.start()
-                window['start_time'].update(t1)
-                p = multiprocessing.Process(target=sql_excel_no_use.write_file_data, args=(process_op_dict, excel_name))
-                p.start()
 
-            if event == "write_excel_save":
-                path_=os.getcwd()
-                subprocess.Popen([path_ + "/mul_save_excel/venv/scripts/python.exe ",path_+"/mul_save_excel/guis.py ",excel_name],shell=True)
-                """
-                process_op_dict["stop_process"] = 0
-                if default_name_flag:
-                    excel_name = values["current_book"]
-                else:
-                    window['current_book'].update(excel_name)
-                print("开始写入时间:", datetime.now())
-                t1 = datetime.now()
-                process_op_dict["end_time"] = t1
-                t_ = Thread(target=thread_write_stoptime,
-                            args=(t1, process_op_dict, window['end_time'], window['use_time']))
-                t_.start()
-                window['start_time'].update(t1)
-                t__=Thread(target=win32_excel.write_file_data,args=(process_op_dict, excel_name))
-                t__.start()
-                """
-                #p = multiprocessing.Process(target=win32_excel.write_file_data, args=(process_op_dict, excel_name))
-                #p.start()
 
             if event in (None, 'close'):  # 如果用户关闭窗口或点击`Cancel`
                 break

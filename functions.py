@@ -76,39 +76,6 @@ def check_is_excel(file_name):
     pass
 
 
-"""
-def get_cp():
-    cp = CP()
-    cp.read("configs.ini",encoding="utf-8")
-    return cp
-
-def write_cp(section,key,value):
-    cp = CP()
-    cp.read("configs.ini", encoding="utf-8")
-    cp.set(section,key,value)
-
-    cp.write(open("configs.ini",'w',encoding="utf-8"))
-    return "写入成功"
-
-def get_mango_client_name():
-    return get_cp().get("mongo", "client")
-
-
-def get_mango_db_name():
-    return get_cp().get("mongo", "db")
-
-
-def get_mango_col_name():
-    return get_cp().get("mongo", "col")
-
-
-def get_excel_driver():
-    return get_cp().get("excel", "driver")
-
-def get_compare_sheet():
-    return get_cp().get("excel", "comparesheet")
-
-"""
 def get_mango_client_name():
     return "mongodb://127.0.0.1:27017/"
 
@@ -123,8 +90,6 @@ def get_mango_col_name():
 
 def get_excel_driver():
     return "DRIVER={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};"
-
-
 
 
 
@@ -227,7 +192,7 @@ def read_excel_write_db(process_op_dict,excel_path, sheet_name, id=0):
             get_excel_driver() + "DBQ=" + excel_path + ";"
         # r'DBQ=C:\Users\Administrator\Desktop\辅助.xlsx;'
     )
-    print(conn_str)
+    #print(conn_str)
     try:
         cnxn = pyodbc.connect(conn_str, autocommit=True)
         crsr = cnxn.cursor()
@@ -267,22 +232,6 @@ def sheet_to_dict(process_op_dict,crsr,sheet_name,excel_path):
         # v["\'" + str(i) + "\'"] = field[0]
         i = i + 1
     this_dict["value"] = v
-    """
-    row_data = {}
-    current = 1
-    for r in row:
-        row_to_mongo = {}
-        j = 0
-        for n in v:
-
-            #row_to_mongo[n+str(current+1)+"@"+v[n]] = r[j]
-            row_to_mongo[n + str(current + 1)]={"name":v[n],"value":r[j]}
-            j = j + 1
-        row_data[str(current+1)] = row_to_mongo
-        current = current + 1
-
-    this_dict["data"] = row_data
-    """
     return this_dict
 
 
